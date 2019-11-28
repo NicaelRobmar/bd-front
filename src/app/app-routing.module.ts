@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'participantes',
     loadChildren: () => import('./participantes/participantes.module').then(m => m.ParticipantesModule)
   },
+  {
+    path: ' eventos',
+    loadChildren: () => import('./eventos/eventos.module').then(m => m.EventosModule)
+  },
 ];
 
 @NgModule({

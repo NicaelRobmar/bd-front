@@ -58,5 +58,35 @@
       "id": 7,
       "nome": "Theo"
     }
+  ],
+  "eventos": [
+    {
+      "id": 1,
+      "nome": "Show 1"
+    },
+    {
+      "nome": "Show 2",
+      "id": 2
+    },
+    {
+      "nome": "Show 3",
+      "id": 3
+    },
+    {
+      "nome": "Show 4",
+      "id": 4
+    },
+    {
+      "nome": "Show 5",
+      "id": 5
+    },
+    {
+      "nome": "Show 6",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "nome": "Show 7"
+    }
   ]
 }
