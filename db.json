@@ -2,11 +2,16 @@
   "cursos": [
     {
       "id": 1,
-      "nome": "Angular"
+      "nome": "Angular",
+      "cpf": "123456789",
+      "cidade_origem": "a",
+      "tema": "Tema",
+      "id_local": null,
+      "tipo": "Tipo"
     },
     {
-      "nome": "Java",
-      "id": 2
+      "id": 2,
+      "nome": "Java"
     },
     {
       "nome": "Angular Material",
@@ -60,6 +65,36 @@
     }
   ],
   "eventos": [
+    {
+      "id": 1,
+      "nome": "Show 1"
+    },
+    {
+      "nome": "Show 2",
+      "id": 2
+    },
+    {
+      "nome": "Show 3",
+      "id": 3
+    },
+    {
+      "nome": "Show 4",
+      "id": 4
+    },
+    {
+      "nome": "Show 5",
+      "id": 5
+    },
+    {
+      "nome": "Show 6",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "nome": "Show 7"
+    }
+  ],
+  "emite-certificado": [
     {
       "id": 1,
       "nome": "Show 1"
