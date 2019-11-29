@@ -63,21 +63,14 @@ export class CursosFormComponent implements OnInit {
       cidade_origem: [curso.cidade_origem, [Validators.maxLength(42)]],
 
       tema: [curso.tema],
-      // edicao: [curso.edicao];
-      // data_hora_inicio: [curso.data_hora_inicio],
-      // data_hora_fim: [curso.data_hora_fim],
+      edicao: [curso.edicao],
+      data_hora_inicio: [curso.data_hora_inicio],
+      data_hora_fim: [curso.data_hora_fim],
       id_local: [curso.id_local],
 
       tipo: [curso.tipo],
     });
   }
-
-  // updateForm(curso) {
-  //   this.form.patchValue({
-  //     id: curso.id,
-  //     nome: curso.nome
-  //   });
-  // }
 
   hasError(field: string) {
     return this.form.get(field).errors;

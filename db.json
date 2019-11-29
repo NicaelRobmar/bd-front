@@ -6,6 +6,9 @@
       "cpf": "123456789",
       "cidade_origem": "a",
       "tema": "Tema",
+      "edicao": 3,
+      "data_hora_inicio": "2019-11-06T12:00",
+      "data_hora_fim": null,
       "id_local": null,
       "tipo": "Tipo"
     },
@@ -62,6 +65,12 @@
     {
       "id": 7,
       "nome": "Theo"
+    },
+    {
+      "id": 8,
+      "nome": "Teste",
+      "cpf": "1234567897",
+      "cidade_origem": "Sp"
     }
   ],
   "eventos": [
@@ -94,34 +103,34 @@
       "nome": "Show 7"
     }
   ],
-  "emite-certificado": [
+  "certificados": [
     {
       "id": 1,
-      "nome": "Show 1"
+      "nome": "Emissão 1"
     },
     {
-      "nome": "Show 2",
+      "nome": "Emissão 2",
       "id": 2
     },
     {
-      "nome": "Show 3",
+      "nome": "Emissão 3",
       "id": 3
     },
     {
-      "nome": "Show 4",
+      "nome": "Emissão 4",
       "id": 4
     },
     {
-      "nome": "Show 5",
+      "nome": "Emissão 5",
       "id": 5
     },
     {
-      "nome": "Show 6",
+      "nome": "Emissão 6",
       "id": 6
     },
     {
       "id": 7,
-      "nome": "Show 7"
+      "nome": "Emissão 7"
     }
   ]
 }

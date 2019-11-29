@@ -72,27 +72,27 @@
     </div>
 
     <div class="form-group col-sm-2" style="margin-top: 40px;">
-      <label for="exampleFormControlSelect1">Edição</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+      <label for="edicao">Edição</label>
+      <input
+        type="number"
+        class="form-control"
+        id="edicao"
+        placeholder="Edição"
+        formControlName="edicao"
+      />
     </div>
 
     <div class="form-group row">
-      <label for="example-datetime-local-input" class="col-5 col-form-label">Data e hora do início</label>
+      <label for="data_hora_inicio" class="col-5 col-form-label">Data e hora do início</label>
       <div class="col-10">
-        <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+        <input class="form-control" type="datetime-local" formControlName="data_hora_inicio" id="data_hora_inicio">
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="example-datetime-local-input" class="col-5 col-form-label">Data e hora do fim</label>
+      <label for="data_hora_fim" class="col-5 col-form-label">Data e hora do fim</label>
       <div class="col-10">
-        <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+        <input class="form-control" type="datetime-local" formControlName="data_hora_fim" id="data_hora_fim">
       </div>
     </div>
 
@@ -110,7 +110,7 @@
 
 
     <div class="col-sm-12" style="margin-top: 40px">
-      <label for="nome">Tipo</label>
+      <label for="tipo">Tipo</label>
       <input
         type="text"
         class="form-control"

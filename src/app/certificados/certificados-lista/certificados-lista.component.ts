@@ -1,6 +1,21 @@
+// import { Component, OnInit } from '@angular/core';
+
+// @Component({
+//   selector: 'app-certificados-lista',
+//   templateUrl: './certificados-lista.component.html',
+//   styleUrls: ['./certificados-lista.component.scss']
+// })
+// export class certificadosListaComponent implements OnInit {
+
+//   constructor() { }
+
+//   ngOnInit() {
+//   }
+
+// }
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { EmiteCertificadoService } from '../emite-certificado.service';
-import { emiteCertificado } from '../emite-certificado';
+import { CertificadosService } from '../certificados.service';
+import { Certificado } from '../certificado';
 import { Observable, empty, of, Subject, EMPTY } from 'rxjs';
 import { catchError, switchMap, take } from 'rxjs/operators';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
@@ -15,20 +30,20 @@ import { Router, ActivatedRoute } from '@angular/router';
   preserveWhitespaces: true
 })
 export class CertificadosListaComponent implements OnInit {
-  // cursos: Curso[];
+  // certificados: certificado[];
 
   // bsModalRef: BsModalRef;
 
   deleteModalRef: BsModalRef;
   @ViewChild('deleteModal', { static: true }) deleteModal;
 
-  certificados$: Observable<emiteCertificado[]>;
+  certificados$: Observable<Certificado[]>;
   error$ = new Subject<boolean>();
 
-  certificadoSelecionado: emiteCertificado;
+  certificadoSelecionado: Certificado;
 
   constructor(
-    private service: EmiteCertificadoService,
+    private service: CertificadosService,
     private modalService: BsModalService,
     private alertService: AlertModalService,
     private router: Router,
@@ -37,7 +52,7 @@ export class CertificadosListaComponent implements OnInit {
 
   ngOnInit() {
     // this.service.list()
-    // .subscribe(dados => this.cursos = dados);
+    // .subscribe(dados => this.certificados = dados);
 
     this.onRefresh();
   }
@@ -72,29 +87,29 @@ export class CertificadosListaComponent implements OnInit {
     this.alertService.showAlertDanger('Erro ao carregar certificados. Tente novamente mais tarde.');
     // this.bsModalRef = this.modalService.show(AlertModalComponent);
     // this.bsModalRef.content.type = 'danger';
-    // this.bsModalRef.content.message = 'Erro ao carregar cursos. Tente novamente mais tarde.';
+    // this.bsModalRef.content.message = 'Erro ao carregar certificados. Tente novamente mais tarde.';
   }
 
   onEdit(id) {
     this.router.navigate(['editar', id], { relativeTo: this.route });
   }
 
-  onDelete(emiteCertificado) {
-    this.certificadoSelecionado = emiteCertificado;
+  onDelete(certificado) {
+    this.certificadoSelecionado = certificado;
     // this.deleteModalRef = this.modalService.show(this.deleteModal, { class: 'modal-sm' });
 
     const result$ = this.alertService.showConfirm('Confirmacao', 'Tem certeza que deseja remover esse certificado?');
     result$.asObservable()
     .pipe(
       take(1),
-      switchMap(result => result ? this.service.remove(emiteCertificado.id) : EMPTY)
+      switchMap(result => result ? this.service.remove(certificado.id) : EMPTY)
     )
     .subscribe(
       success => {
         this.onRefresh();
       },
       error => {
-        this.alertService.showAlertDanger('Erro ao remover certificados. Tente novamente mais tarde.');
+        this.alertService.showAlertDanger('Erro ao remover certificado. Tente novamente mais tarde.');
       }
     );
   }

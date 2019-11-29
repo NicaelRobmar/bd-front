@@ -10,14 +10,14 @@ const routes: Routes = [
     path: 'novo',
     component: CertificadosFormComponent,
     resolve: {
-      emiteCertificado: CertificadoResolverGuard
+      certificado: CertificadoResolverGuard
     }
   },
   {
     path: 'editar/:id',
     component: CertificadosFormComponent,
     resolve: {
-      emiteCertificado: CertificadoResolverGuard
+      certificado: CertificadoResolverGuard
     }
   }
 ];
@@ -26,4 +26,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class EmiteCertificadoRoutingModule {}
+export class CertificadosRoutingModule {}

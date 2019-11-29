@@ -5,9 +5,9 @@ export interface Curso {
   cidade_origem: string;
 
   tema: string,
-  // edicao: number;
-  // data_hora_inicio: Date,
-  // data_hora_fim: Date,
+  edicao: number;
+  data_hora_inicio: Date,
+  data_hora_fim: Date,
   id_local: number,
 
   

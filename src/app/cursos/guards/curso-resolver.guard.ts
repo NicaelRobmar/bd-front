@@ -22,9 +22,9 @@ export class CursoResolverGuard implements Resolve<Curso> {
       cidade_origem: null,
 
       tema: null,
-      // edicao: null,
-      // data_hora_inicio: null,
-      // data_hora_fim: null,
+      edicao: null,
+      data_hora_inicio: null,
+      data_hora_fim: null,
       id_local: null,
 
       tipo: null,
