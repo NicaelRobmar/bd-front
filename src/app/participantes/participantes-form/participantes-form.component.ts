@@ -63,5 +63,6 @@ export class ParticipantesFormComponent implements OnInit {
   onCancel() {
     this.submitted = false;
     this.form.reset();
+    this.location.back();
   }
 }
