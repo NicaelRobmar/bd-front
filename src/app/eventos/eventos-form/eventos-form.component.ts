@@ -63,5 +63,6 @@ export class EventosFormComponent implements OnInit {
   onCancel() {
     this.submitted = false;
     this.form.reset();
+    this.location.back();
   }
 }

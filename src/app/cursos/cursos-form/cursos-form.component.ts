@@ -120,6 +120,6 @@ export class CursosFormComponent implements OnInit {
   onCancel() {
     this.submitted = false;
     this.form.reset();
-    // console.log('onCancel');
+    this.location.back();
   }
 }

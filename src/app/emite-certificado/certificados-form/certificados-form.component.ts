@@ -119,6 +119,6 @@ export class CertificadosFormComponent implements OnInit {
   onCancel() {
     this.submitted = false;
     this.form.reset();
-    // console.log('onCancel');
+    this.location.back();
   }
 }
