@@ -17,6 +17,6 @@ export class EventosService extends CrudService<Evento> {
   }
 
   loadByID(id) {
-    return this.http.get<Evento>(`${this.API}/${id}`).pipe(take(1));
+    return null;
   }
 }

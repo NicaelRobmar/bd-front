@@ -17,6 +17,6 @@ export class ParticipantesService extends CrudService<Participante> {
   }
 
   loadByID(id) {
-    return this.http.get<Participante>(`${this.API}/${id}`).pipe(take(1));
+    return null;
   }
 }

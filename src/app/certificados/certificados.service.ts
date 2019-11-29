@@ -17,6 +17,6 @@ export class CertificadosService extends CrudService<Certificado> {
   }
 
   loadByID(id) {
-    return this.http.get<Certificado>(`${this.API}/${id}`).pipe(take(1));
+    return null;
   }
 }
